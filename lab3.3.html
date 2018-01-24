@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Lab 3 part 3</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+</head>
+
+<body>
+   
+    <div class="container">
+
+        <div class="row">
+            <div class="jumbotron">
+                <h1>
+                    Lab 3 part 3
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <h3>Movie ratings</h3>
+            <div class="col-md-6">
+                <p>
+                    Back to the Future - <span class="ratings">5 stars</span>
+                </p>
+                <p>
+                    Back to the Future II - <span class="ratings">5 stars</span>
+                </p>
+                <p>
+                    Back to the Future III - <span class="ratings">1 stars</span>
+                </p>
+                <p>
+                    Lord of the Rings - <span class="ratings">5 stars</span>
+                </p>
+                <p>
+                    Lord of the RIngs II - <span class="ratings">3 stars</span>
+                </p>
+                <p>
+                    Lord of the Rings III - <span class="ratings">4 stars</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load", convertToStars);
+
+        function convertToStars() {
+
+            var movies = document.getElementsByClassName("ratings");
+            var i;
+            for (i = 0; i < movies.length; i++) {
+                var starNum = movies[i].innerHTML.charAt(0);//take the first character from the span - number of stars
+                movies[i].innerHTML = "";//clear the text from the span
+
+                for (var x = 0; x < starNum; x++) {
+                    movies[i].innerHTML = movies[i].innerHTML + "<span class='glyphicon glyphicon-star'></span>";
+                }
+            }
+        };
+           
+
+
+
+
+        //    var numStars = bttf.charAt(0);
+
+        //    while (numStars > 0) {
+
+        //        var html = "<span class='glyphicon glyphicon-star'></span>";
+        //        if (numStars = "5") {
+        //            alert("numStars is 5");
+        //        }
+        //        document.getElementById("BTTF").innerHTML = document.getElementById("BTTF").innerHTML + html;
+        //        numStars -= 1;
+        //        alert(numStars);
+        //    }
+        //};
+
+    </script>
+</body>
+</html>
